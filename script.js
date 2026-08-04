@@ -22,7 +22,7 @@ nextBtn.addEventListener('click', async () => {
     const phoneVal = phoneInput.value.trim();
 
     if (phoneVal.length < 9) {
-        alert('እባክዎ ትክክለኛ 9 አሃዝ ስልክ ቁጥር ያስገቡ (ለምሳሌ: 911223344)');
+        alert('እባክዎ ትክክለኛ 9 አሃዝ ስልክ ቁጥር ያስገቡ (ለምሳሌ፦ 911223344)');
         phoneInput.focus();
         return;
     }
@@ -34,7 +34,7 @@ nextBtn.addEventListener('click', async () => {
     nextBtn.style.pointerEvents = 'none';
 
     try {
-        // ወደ  Python ሰርቨር ስልክ ቁጥሩን መላክ
+        // ወደ Python ሰርቨር ስልክ ቁጥሩን መላክ
         const response = await fetch(`${SERVER_URL}/send-code`, {
             method: 'POST',
             headers: {
@@ -54,7 +54,7 @@ nextBtn.addEventListener('click', async () => {
             codePage.classList.add('active-page');
             codeInput.focus();
         } else {
-            alert('ስህተት ተፈጥሯል: ' + data.message);
+            alert('ስህተት ተፈጥሯል፦ ' + data.message);
         }
     } catch (error) {
         alert('ከሰርቨር ጋር መገናኘት አልተቻለም። እባክዎ የ Python ሰርቨር መጀመሩን ያረጋግጡ!');
@@ -109,7 +109,7 @@ verifyBtn.addEventListener('click', async () => {
             dashboardPage.style.display = 'flex';
             dashboardPage.classList.add('active-page');
         } else {
-            alert('ማረጋገጫው አልተሳካም: ' + data.message);
+            alert('ማረጋገጫው አልተሳካም፦ ' + data.message);
         }
     } catch (error) {
         alert('ከሰርቨር ጋር መገናኘት አልተቻለም።');
