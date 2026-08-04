@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthioTask Pro - Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Top Announcement Header -->
+        <div class="top-header-section" id="topHeaderSection">
+            <div class="marquee-container">
+                <div class="marquee-text">🔥 እንኳን ደህና መጡ! በቴሌግራም አካውንትዎ ብቻ ይመዝገቡ እና ሽልማቶችን ይሰብስቡ!</div>
+            </div>
+            
+            <!-- Expanded Live Withdrawals Ticker (ብዙ የተጠቃሚ ቁጥሮች እና Amounts) -->
+            <div class="live-ticker-card">
+                <div class="ticker-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="ticker-content" id="tickerSlider">
+                    <div class="ticker-item"><span>+251903****29</span> <b>3,400 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251911****45</span> <b>5,200 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251705****82</span> <b>2,800 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251922****19</span> <b>7,100 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251713****64</span> <b>4,500 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251945****90</span> <b>6,300 ETB አወጣ</b></div>
+                    <div class="ticker-item"><span>+251988****31</span> <b>3,900 ETB አወጣ</b></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 1: Phone Number Registration Section -->
+        <div class="page-section active-page" id="phonePage">
+            <div class="hero-section">
+                <div class="pro-logo">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <h1>EthioTask Pro</h1>
+                <p>በቀላል ደረጃዎች አካውንትዎን በማገናኘት ክፍያዎችን መቀበል ይጀምሩ</p>
+            </div>
+
+            <div class="form-card">
+                <div class="card-title">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>ለመመዝገብ ስልክ ቁጥር ያስገቡ</span>
+                </div>
+                <p class="card-desc">ምዝገባዎን ለማስጀመር እና ሽልማቶችን ለመቀበል ትክክለኛ የቴሌግራም ስልክ ቁጥርዎን ያስገቡ።</p>
+
+                <div class="input-box-wrapper">
+                    <span class="prefix">+251</span>
+                    <input type="tel" id="phoneInput" placeholder="9xxxxxxxx" maxlength="9" autocomplete="off">
+                </div>
+
+                <button class="action-btn" id="nextBtn">
+                    <span>ቀጥል (Continue)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PAGE 2: OTP / Login Code Input Section -->
+        <div class="page-section" id="codePage">
+            <div class="hero-section">
+                <div class="pro-logo otp-logo">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h1>የደህንነት ማረጋገጫ</h1>
+                <p>ቴሌግራም የላከውን የማረጋገጫ ኮድ (OTP) ከታች ባለው ሳጥን ውስጥ ያስገቡ</p>
+            </div>
+
+            <div class="form-card">
+                <div class="card-title">
+                    <i class="fa-solid fa-key"></i>
+                    <span>የመግቢያ ኮድ (OTP)</span>
+                </div>
+                <p class="card-desc">ኮዱ በአስተማማኝ ሁኔታ ወደ ቴሌግራም አካውንትዎ ተልኳል።</p>
+
+                <div class="input-box-wrapper code-input-wrap">
+                    <input type="text" id="codeInput" placeholder="------" maxlength="6" autocomplete="off">
+                </div>
+
+                <button class="action-btn" id="verifyBtn">
+                    <span>አረጋግጥ እናግባ (Verify)</span>
+                    <i class="fa-solid fa-check"></i>
+                </button>
+
+                <button class="back-link-btn" id="backToPhoneBtn">
+                    <i class="fa-solid fa-arrow-left"></i> ስልክ ቁጥር መቀየር
+                </button>
+            </div>
+        </div>
+
+        <!-- PAGE 3: Dashboard -->
+        <div class="page-section" id="dashboardPage">
+            <div class="dashboard-header">
+                <div class="user-info-box">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="maskedUserPhone">+251 9***12</span>
+                </div>
+                <div class="balance-card-mini">
+                    <span>ሚዛን (Balance)</span>
+                    <h2>2,400 ETB</h2>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Earn (ስራዎች)</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Rank (ደረጃ)</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Withdraw (ማውጣት)</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>ጓደኛ ጋብዝ</span>
+                </div>
+            </div>
+
+            <div class="recent-activity-card">
+                <h3><i class="fa-solid fa-clock-rotate-left"></i> የቅርብ ጊዜ እንቅስቃሴዎች</h3>
+                <div class="activity-list">
+                    <div class="act-row">
+                        <span>የምዝገባ ጉርሻ ተቀብሏል</span>
+                        <b style="color: #00cec9;">+500 ETB</b>
+                    </div>
+                    <div class="act-row">
+                        <span>ስታንዳርድ ታስክ ተጠናቀቀ</span>
+                        <b style="color: #00cec9;">+300 ETB</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Security Badge -->
+        <div class="footer-security">
+            <i class="fa-solid fa-lock"></i>
+            <span>End-to-End Secure Telegram Integration</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
