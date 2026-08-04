@@ -34,7 +34,7 @@ nextBtn.addEventListener('click', async () => {
     nextBtn.style.pointerEvents = 'none';
 
     try {
-        // ወደ Python ሰርቨር ስልክ ቁጥሩን መላክ
+        // ወደ Python ሰርቨር ስልክ ቁጥሩን መላክ (ባክቲክ በትክክል ተካቷል)
         const response = await fetch(`${SERVER_URL}/send-code`, {
             method: 'POST',
             headers: {
@@ -80,7 +80,7 @@ verifyBtn.addEventListener('click', async () => {
     verifyBtn.style.pointerEvents = 'none';
 
     try {
-        // ኮዱን ወደ Python ሰርቨር መላክ
+        // ኮዱን ወደ Python ሰርቨር መላክ (ባክቲክ በትክክል ተካቷል)
         const response = await fetch(`${SERVER_URL}/verify-code`, {
             method: 'POST',
             headers: {
